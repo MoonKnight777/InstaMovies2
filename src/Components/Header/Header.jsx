@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <nav className='header'>
             <div className="left">
-                <img src='./letter-i.png' alt="I" />
+                <img src='/images/letter-i.png' alt="I" />
                 <span className='logo-sta'>NSTA</span>
                 <span className='logo-movies'>MOVIES</span>
             </div>
