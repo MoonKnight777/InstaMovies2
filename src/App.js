@@ -10,6 +10,7 @@ function App() {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/MoonKnight777.github.io/InstaMovies2/' element={<Home/>}/>
         </Routes>
       </div>
     </Router>
