@@ -49,22 +49,50 @@
     }
 
     .right {
-
-        display: flex;
-        align-items: center;
-
-
-        svg {
-            color: white;
-            font-size: 1.8vw;
-            transition: 0.2s;
-
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.1);
-                color: rgb(108, 205, 250);
+        
+        form {
+            display: flex;
+            align-items: center;
+            input {
+                margin: 10px;
+                width: 20vw;
+                padding: 5px 10px;
+                border-radius: 4px;
+                outline: none;
+                border: none;
+                color: rgba(156, 229, 252, 0.788);
+                background: #1a1a1a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &::placeholder {
+                    color: rgba(200, 238, 255, 0.452);
+                    font-weight: 300;
+                }
+            }
+            button{
+                background: transparent;
+                outline: none;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    
+                    color: white;
+                    font-size: 1.8vw;
+                    transition: 0.2s;
+    
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.1);
+                        color: rgb(108, 205, 250);
+                    }
+    
+                }
             }
         }
+
 
     }
 

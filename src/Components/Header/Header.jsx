@@ -1,9 +1,21 @@
-import React from 'react';
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import { IoMdSearch } from "react-icons/io";
-import "./Header.scss"
-import logo from"./letter-i.png"
+import "./Header.scss";
+import logo from"./letter-i.png";
+import axios from 'axios';
+
 export const Header = () => {
+
+    const [searchValue ,setSearchValue] = useState('');
+
+    const searchHandler = async(e)=>{
+        e.preventDefault();
+        const searchedData = await axios.get()
+    }
+
+    console.log(process.env);
+
     return (
         <nav className='header'>
             <div className="left">
@@ -18,7 +30,10 @@ export const Header = () => {
                 <Link className='nav-links' to="/mylist">My List</Link>
             </div>
             <div className="right">
-                <IoMdSearch/>
+                <form onSubmit={searchHandler}>
+                    <input type='text' onChange={(e)=>setSearchValue(e.target.value)} placeholder='What are you looking for ?'/>
+                    <button type='submit' ><IoMdSearch /></button>
+                </form>
             </div>
         </nav>
     )
