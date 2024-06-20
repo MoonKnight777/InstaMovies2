@@ -3,9 +3,9 @@ import './Home.scss'
 import { Row } from '../Row/Row'
 import axios from 'axios'
 
-const url = 'https://api.themoviedb.org/3/';
-const apikey = 'd31a88a82df389ab99cf749d48d53ce4'
-// https://api.themoviedb.org/3/movie/popular?api_key=d31a88a82df389ab99cf749d48d53ce4
+const url = process.env.REACT_APP_URL;
+const apikey = process.env.REACT_APP_API_KEY;
+
 const fetchdata = async(type,category)=>{
   try {
     const response = await axios.get(`${url}${type}/${category}?api_key=${apikey}`);
@@ -50,7 +50,7 @@ export const Home = () => {
           <button>Watch Now</button>
           </div>
         {popularMovies.length > 0 && popularMovies[0].poster_path ? (
-                    <img src={`https://image.tmdb.org/t/p/w500${popularMovies[0].backdrop_path}`} alt="HOME" />
+                    <img src={`${process.env.REACT_APP_IMG_URL}${popularMovies[0].backdrop_path}`} alt="HOME" />
                 ) : (
                     <div>Loading...</div>
                 )}

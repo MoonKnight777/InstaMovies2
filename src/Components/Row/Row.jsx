@@ -16,7 +16,7 @@ export const Row = ({ title,
 
                 {cardsArr.map((item, index) => {
                     // console.log(item)
-                    return <Card key={index} img={`https://image.tmdb.org/t/p/w500${item.poster_path}`} />
+                    return <Card key={index} img={`${process.env.REACT_APP_IMG_URL}${item.poster_path}`} />
                 })}
             </div>
 
