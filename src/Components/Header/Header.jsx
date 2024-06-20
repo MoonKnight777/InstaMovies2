@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { IoMdSearch } from "react-icons/io";
 import "./Header.scss";
 import logo from"./letter-i.png";
-import axios from 'axios';
+
 
 export const Header = () => {
 
@@ -11,7 +11,8 @@ export const Header = () => {
 
     const searchHandler = async(e)=>{
         e.preventDefault();
-        const searchedData = await axios.get()
+        console.log(searchValue);
+        // const searchedData = await axios.get()
     }
 
     console.log(process.env);
