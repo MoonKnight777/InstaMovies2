@@ -55,10 +55,10 @@ export const Home = () => {
                     <div>Loading...</div>
                 )}
         </div>
-        <Row title={"Upcoming"} cardsArr={nowplaying} />
-        <Row title={"Popular Now"} cardsArr={popularMovies}/>
-        <Row title={"Top movies"} cardsArr={topmovies}/>
-        <Row title={"Top Shows"} cardsArr={topShows}/>
+        <Row title={"Upcoming"} type={"movie"} cardsArr={nowplaying} />
+        <Row title={"Popular Now"}type={"movie"}  cardsArr={popularMovies}/>
+        <Row title={"Top movies"} type={"movie"} cardsArr={topmovies}/>
+        <Row title={"Top Shows"} type={"tv"} cardsArr={topShows}/>
     </div>
   )
 }

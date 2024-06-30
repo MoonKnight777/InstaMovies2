@@ -13,7 +13,7 @@ export const Header = () => {
 
     const [searchValue ,setSearchValue] = useState('');
     const [searchCate ,setSearchCate] = useState('multi');
-    const [includeAdult,setIncludeAdult] = useState(false);
+    const [includeAdult,setIncludeAdult] = useState(true);
 
     const searchHandler = async(e)=>{
         e.preventDefault();
@@ -31,7 +31,6 @@ export const Header = () => {
             console.log(data.results);
             if(data && data.results.length > 0)
                 {
-                console.log("entered in if");
                 navigate('/search',{state : {results : data.results}})
             }
             else

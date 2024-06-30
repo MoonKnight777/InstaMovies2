@@ -1,14 +1,23 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import './SearchPage.scss'
 import defaultPoster from './default.avif'
 
+
 const SearchPageRow = ({ data }) => {
+
+
     const media_type = data.media_type;
     const releaseYear = data.release_date || data.first_air_date ? new Date((media_type === 'movie') ? data.release_date : data.first_air_date).getFullYear() : 'N/A';
     const posterUrl = data.poster_path ? `${process.env.REACT_APP_IMG_URL}${data.poster_path}` : defaultPoster; // Provide a default image path
+    
+    const navigate = useNavigate();
+    const showMoviesDetails = async () => {
+        navigate(`/details/${data.id}`,{state : {type : media_type}});
+    }
+
     return (
-        <div className="search-row-container">
+        <div className="search-row-container" onClick={showMoviesDetails}>
             <div className="left">
                 <img src={posterUrl} alt="" />
             </div>

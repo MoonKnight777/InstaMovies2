@@ -3,7 +3,7 @@ import { Card } from '../Cards/Card'
 import './Row.scss'
 
 export const Row = ({ title,
-    cardsArr = []
+    cardsArr = [], type
 }) => {
     return (
         <div className='row'>
@@ -15,8 +15,7 @@ export const Row = ({ title,
             <div className="cards-container">
 
                 {cardsArr.map((item, index) => {
-                    // console.log(item)
-                    return <Card key={index} img={`${process.env.REACT_APP_IMG_URL}${item.poster_path}`} />
+                    return <Card key={item.id} data={item} type={type} img={`${process.env.REACT_APP_IMG_URL}${item.poster_path}`} />
                 })}
             </div>
 
