@@ -18,7 +18,7 @@ export const Header = () => {
     const searchHandler = async(e)=>{
         e.preventDefault();
         console.log(searchValue);
-        const url = `${process.env.REACT_APP_URL}/search/${searchCate}`;
+        const url = `${process.env.REACT_APP_URL}search/${searchCate}`;
         const params = {
             query : searchValue,
             include_adult : includeAdult,
