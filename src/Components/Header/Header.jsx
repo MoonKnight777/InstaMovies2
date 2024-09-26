@@ -21,7 +21,7 @@ export const Header = () => {
         const url = `${process.env.REACT_APP_URL}search/${searchCate}`;
         const params = {
             query : searchValue,
-            include_adult : includeAdult,
+            include_adult : true,
             language : 'en-US',
             page : 1,
             api_key : process.env.REACT_APP_API_KEY
