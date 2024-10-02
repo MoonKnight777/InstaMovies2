@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/InstaMovies2/static/css/main.ff329001.css",
+    "main.js": "/InstaMovies2/static/js/main.771db8d3.js",
+    "static/media/letter-i.png": "/InstaMovies2/static/media/letter-i.6e9bb6dd1a9989b91e0a.png",
+    "static/media/default.avif": "/InstaMovies2/static/media/default.567ceaf9981c559ebd70.avif",
+    "index.html": "/InstaMovies2/index.html",
+    "main.ff329001.css.map": "/InstaMovies2/static/css/main.ff329001.css.map",
+    "main.771db8d3.js.map": "/InstaMovies2/static/js/main.771db8d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff329001.css",
+    "static/js/main.771db8d3.js"
+  ]
+}
